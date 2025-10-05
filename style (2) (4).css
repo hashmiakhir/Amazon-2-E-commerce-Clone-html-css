@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3e6e6;
+}
+
+.navbar {
+  background-color: #131921;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+    
+.location,
+.lang,
+.account,
+.returns,
+.cart {
+  font-size: 14px;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  max-width: 600px;
+    
+}
+
+.search select,
+.search input,
+.search button {
+  padding: 8px;
+  border: none;
+}
+
+.search select {
+  background: #f3f3f3;
+}
+
+.search input {
+  flex: 1;
+}
+
+.search button {
+  background-color: #febd69;
+  cursor: pointer;
+}
+
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+        
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background-color: #ffa41c;
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.products {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.product-card p {
+  color: #e47911;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  background-color: #ffa41c;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.carousel-section {
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.carousel-section h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px; 
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 150px;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.submenu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  background-color: #232f3e;
+  color: white;
+  padding: 40px;
+}
+
+.submenu-column h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.submenu-column a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.submenu-column a:hover {
+  text-decoration: underline;
+}
+
+/*📱 Mobile First – Max Width 480px*/
+@media (max-width: 480px) {
+  .navbar, .hero, {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar {
+    width: 90%;
+  }
+
+  .product-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*📲 Small Tablets – Max Width 768px*/
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+}
+
+/*💻 Laptops – Max Width 1024px*/
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    padding: 40px;
+  }    
+}
+
+/*🖥️ Large Screens – 1200px+*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
