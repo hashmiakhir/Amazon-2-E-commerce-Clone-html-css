@@ -230,10 +230,20 @@ body {
     width: 90%;
   }
 
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .product-card {
     width: 100%;
     margin-bottom: 20px;
   }
+
+  .submenu {
+    display: flex;
+    flex-wrap: wrap;
+  }  
 }
 
 /*📲 Small Tablets – Max Width 768px*/
